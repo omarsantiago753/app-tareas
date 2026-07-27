@@ -1,0 +1,42 @@
+.task-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.complete-all {
+    background-color: #28a745;
+}
+
+.complete-all:hover {
+    background-color: #1e7e34;
+}
+
+.pending-all {
+    background-color: #ffc107;
+    color: black;
+}
+
+.pending-all:hover {
+    background-color: #e0a800;
+}
+
+.delete-all {
+    background-color: #dc3545;
+}
+
+.delete-all:hover {
+    background-color: #b21f2d;
+}
