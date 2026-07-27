@@ -1,0 +1,64 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tema claro */
+
+body.light {
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Tema oscuro */
+
+body.dark {
+    background-color: #1f1f1f;
+    color: #f5f5f5;
+}
+
+/* Contenedor */
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+/* Botón */
+
+.theme-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.theme-btn:active {
+    transform: scale(0.95);
+}
+
+/* Adaptación para móviles */
+
+@media (max-width: 600px) {
+    .theme-toggle {
+        justify-content: center;
+    }
+
+    .theme-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
