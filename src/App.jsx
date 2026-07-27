@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
+import React, { useState, useEffect } from "react";
+import TaskForm from "./components/TaskForm";
 
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  // Cargar tareas desde localStorage
+  // Cargar tareas desde localStorage al iniciar
   useEffect(() => {
     const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
     setTasks(savedTasks);
@@ -12,15 +12,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header tasks={tasks} setTasks={setTasks} />
+      <TaskForm tasks={tasks} setTasks={setTasks} />
 
       <h2>Mis tareas</h2>
 
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
-            {task.text}
-          </li>
+          <li key={task.id}>{task.text}</li>
         ))}
       </ul>
     </div>
