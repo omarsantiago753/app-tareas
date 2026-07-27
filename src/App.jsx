@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Input from "./components/Input";
+import Button from "./components/Button";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -12,15 +12,13 @@ function App() {
 
   return (
     <div className="App">
-      <Input tasks={tasks} setTasks={setTasks} />
+      <Button tasks={tasks} setTasks={setTasks} />
 
       <h2>Mis tareas</h2>
 
       <ul>
         {tasks.map((task) => (
-          <li key={task.id}>
-            {task.text}
-          </li>
+          <li key={task.id}>{task.text}</li>
         ))}
       </ul>
     </div>
